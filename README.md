@@ -21,7 +21,6 @@ $ git clone https://github.com/Kiny-Kiny/ProxyChanger
 $ cd ProxyChanger
 $ python3 main.py
 
-
 OpenSUSE
 $ zypper install python git -y
 $ git clone https://github.com/Kiny-Kiny/ProxyChanger
