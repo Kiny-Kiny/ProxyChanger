@@ -1,4 +1,9 @@
-import os, sys, requests
+import os, sys
+try:
+  import requests
+except:
+  os.system('pip install requests')
+import requests
 os.system('clear')
 url = 'https://httpbin.org/ip'
 proxy = input('''#Proxy Changer | A simple script to hide your IP Adress| By: KinyCrimson#
