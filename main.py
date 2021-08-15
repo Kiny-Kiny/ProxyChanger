@@ -1,18 +1,32 @@
-import os, sys
+from os import system
+banner='''
+ __  __     __     __   __     __  __    
+/\ \/ /    /\ \   /\ "-.\ \   /\ \_\ \   
+\ \  _"-.  \ \ \  \ \ \-.  \  \ \____ \  
+ \ \_\ \_\  \ \_\  \ \_\\"\_\  \/\_____\ 
+  \/_/\/_/   \/_/   \/_/ \/_/   \/_____/ \n
+'''
 try:
-  import requests
+	from requests import get
 except:
-  os.system('pip install requests')
-import requests
-os.system('clear')
-url = 'https://httpbin.org/ip'
-proxy = input('''#Proxy Changer | A simple script to hide your IP Adress| By: KinyCrimson#
-# Website with free proxies: http://free-proxy.cz/en/
-#Ex: 159.203.12.49:8888
-IP/PORT: ''')
+	system('pip install requests');print('_ ! _ Instalação do módulo requests foi concluída. Execute o script novamente. _ ! _');exit()
 try:
-		while True:
-			response = requests.get(url, proxies={'http': proxy, 'https': proxy})
-			print(response.json())
+	time=int(input(f'''{banner}_ ! _ Digite os segundos que deseja ficar conectado >>> '''))
 except:
-	print('Check your internet connection or use another proxy');exit()
+	print('_ ! _ Caracteres inválidos. _ ! _');exit()
+while(time > 0):
+	try:
+		from time import sleep
+		r=get('http://pubproxy.com/api/proxy').json()
+		proxy=r['data'][0]['ip']+':'+r['data'][0]['port']
+		response=get('https://httpbin.org/ip', proxies={'https': proxy, 'http': proxy})
+		print(response.json())
+		#print(response)
+		sleep(1)
+		time=time-1
+	except:
+		None
+op=input('Deseja continuar? \n1 - Sim\n2 - Não\n>>> ')
+if op == '1': pass
+elif op == '2': pass
+else: print('_ ! _ Opção inválida. _ ! _')
