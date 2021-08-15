@@ -27,6 +27,6 @@ while(time > 0):
 	except:
 		None
 op=input('Deseja continuar? \n1 - Sim\n2 - Não\n>>> ')
-if op == '1': pass
-elif op == '2': pass
+if op == '1': from sys import argv; from sys import execl; from sys import executable;execl(executable, executable, *argv)
+elif op == '2': system('cls');system('clear');exit()
 else: print('_ ! _ Opção inválida. _ ! _')
