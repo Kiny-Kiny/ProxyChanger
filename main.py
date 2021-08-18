@@ -37,7 +37,7 @@ while(time > 0):
 		from time import sleep
 		r=get('http://pubproxy.com/api/proxy').json()
 		proxy=r['data'][0]['ip']+':'+r['data'][0]['port']
-		response=get('https://httpbin.org/ip', proxies={'https': proxy, 'http': proxy}).json()
+		response=get('https://httpbin.org/ip', proxies={'http': proxy}).json()
 		try:
 			print(f'{G}Conectado a proxy: '+response['origin'])
 		except:
