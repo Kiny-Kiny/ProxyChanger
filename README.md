@@ -21,7 +21,7 @@ $ cd ProxyChanger
 $ python3 main.py
 
 Arch Linux
-$ pacman -Syyu git python -y
+$ sudo pacman -S git net-tools python --noconfirm
 $ git clone https://github.com/Kiny-Kiny/ProxyChanger
 $ cd ProxyChanger
 $ python3 main.py
