@@ -1,5 +1,10 @@
 # ProxyChanger
 A simple script to hide your IP Adress.
+
+> [!IMPORTANT]
+> 
+> Superuser rights are required. Use `sudo`, `doas` or others before executing `main.py`.
+
 ```
 Termux
 $ pkg upgrade && pkg update -y
