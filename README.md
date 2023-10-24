@@ -1,5 +1,10 @@
 # ProxyChanger
 A simple script to hide your IP Adress.
+
+> [!IMPORTANT]
+> 
+> Superuser rights are required. Use `sudo`, `doas` or others before executing `main.py`.
+
 ```
 Termux
 $ pkg upgrade && pkg update -y
@@ -16,7 +21,7 @@ $ cd ProxyChanger
 $ python3 main.py
 
 Arch Linux
-$ pacman -Syyu git python -y
+$ sudo pacman -S git net-tools python --noconfirm
 $ git clone https://github.com/Kiny-Kiny/ProxyChanger
 $ cd ProxyChanger
 $ python3 main.py
